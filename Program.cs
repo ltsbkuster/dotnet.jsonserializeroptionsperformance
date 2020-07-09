@@ -28,7 +28,7 @@ namespace dotnet.jsonserializeroptionsperformance
 
 
             start = DateTime.Now;
-            var options = new JsonSerializerOptions { };
+            var options = new JsonSerializerOptions { IgnoreNullValues = true };
             for (var i = 0; i < 100000; i++)
             {
                 var dataStr = JsonSerializer.Serialize(data, options);
